@@ -42,6 +42,7 @@ export default {
       if (firebase.auth().currentUser) {
         firebase.auth().currentUser.getIdToken(true)
         .then((idToken) => {
+          console.log(idToken)
           client({
             method: 'get',
             url: '/',
